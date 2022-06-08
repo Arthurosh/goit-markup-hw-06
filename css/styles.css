@@ -741,16 +741,16 @@ img {
 
 .modal-form-checkbox {
 	margin-top: 20px;
-	margin-bottom: 40px;
+	margin-bottom: 30px;
 }
 
-.chackbox-label {
+.checkbox-label {
 	display: flex;
 	justify-content: center;
 	align-items: center;
 }
 
-/* .chackbox {
+.checkbox-input {
 	position: absolute;
 	width: 1px;
 	height: 1px;
@@ -762,22 +762,22 @@ img {
 	clip-path: inset(100%);
 	clip: rect(0 0 0 0);
 	overflow: hidden;
-} */
+}
 
-.chackbox-input-icon {
+.checkbox-input-icon {
 	display: inline-block;
-
 	width: 16px;
 	height: 15px;
 	border: 2px solid var(--title-text-color);
 	border-radius: 2px;
-	margin-right: 8px;
+	margin-right: 7px;
 
 	background-color: var(--white-color);
+	transition: border-color 250ms var(--transition-time);
 	transition: background-color 250ms var(--transition-time);
 }
 
-.chackbox:checked ~ .chackbox-input-icon {
+.checkbox-input:checked + .checkbox-input-icon {
 	border-color: transparent;
 	background-color: var(--accent-color);
 	background-image: url(../images/icons.svg/icon-check.svg);
@@ -785,18 +785,21 @@ img {
 	background-size: contain;
 	background-repeat: no-repeat;
 	background-origin: content-box;
+
 	transition: background-image 250ms var(--transition-time);
 }
 
-.chackbox:checked:focus ~ .chackbox-input-icon {
+.checkbox-input:hover + .checkbox-input-icon,
+.checkbox-input:focus + .checkbox-input-icon {
+	border-color: var(--accent-color);
 	background-image: url(../images/icons.svg/icon-check.svg);
 }
 
-.chackbox-title {
+.checkbox-title {
 	line-height: 1.71;
 }
 
-.chackbox-link-contract {
+.checkbox-link-contract {
 	line-height: 1.71;
 	outline: 0;
 	outline-offset: 0;
@@ -807,8 +810,8 @@ img {
 	transition: opacity 250ms var(--transition-time);
 }
 
-.chackbox-link-contract:hover,
-.chackbox-link-contract:focus {
+.checkbox-link-contract:hover,
+.checkbox-link-contract:focus {
 	opacity: 1;
 	cursor: pointer;
 }
