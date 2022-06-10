@@ -831,8 +831,7 @@ img {
 	color: var(--text-white-color);
 	background-color: var(--accent-color);
 
-	transition: background-color 250ms var(--transition-time);
-	transition: border-shadow 250ms var(--transition-time);
+	transition: background-color 250ms var(--transition-time), border-shadow 250ms var(--transition-time);
 }
 
 .modal-button-send:hover,
@@ -860,8 +859,7 @@ img {
 
 	fill: var(--black-color);
 
-	transition: fill 250ms var(--transition-time);
-	transition: border-color 250ms var(--transition-time);
+	transition: fill 250ms var(--transition-time), border-color 250ms var(--transition-time);
 }
 
 .modal-button-close:hover,
